@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+
+  /* margin: 0;
+  padding: 0;
+  background-color: #f9f9f9; */
+}
+
+/* My addition */
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  background-color: #333;
+  padding: 15px 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+
+/* OTHER DRY CLEANERS SECTION */
+.other-cleaners {
+  text-align: center;
+  padding: 50px;
+  background-color: #000;
+  color: white;
+}
+
+.other-cleaners h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.other-cleaners p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.cleaner-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cleaner-box {
+  padding: 20px;
+  border: 1px dashed white;
+  text-align: center;
+  background-color: #111;
+  color: white;
+  border-radius: 8px;
+}
+
+.cleaner-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.cleaner-box p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
